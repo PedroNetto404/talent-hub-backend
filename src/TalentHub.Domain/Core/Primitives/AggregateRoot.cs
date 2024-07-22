@@ -1,19 +1,7 @@
-﻿namespace TalentHub.Domain.Core.Primitives;
+﻿using TalentHub.Domain.Core.Abstractions;
+using TalentHub.Domain.Core.Events;
 
-public record AggregateDeletedEvent<TEntityId>(TEntityId Id)
-    : IEvent
-    where TEntityId : EntityId<TEntityId>, new();
-
-public record AggregateModifiedEvent(IAggregateRoot RootState) : IEvent;
-
-public interface IAggregateRoot
-{
-    IReadOnlyCollection<IEvent> Events { get; }
-
-    void RaiseEvent(IEvent @event);
-
-    void ClearEvents();
-}
+namespace TalentHub.Domain.Core.Primitives;
 
 public abstract class AggregateRoot<TEntityId>
     : Entity<TEntityId>, IAggregateRoot
