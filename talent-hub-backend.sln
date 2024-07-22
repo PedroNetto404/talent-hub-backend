@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{52E67793-D532-4E17-AC58-EC314021CE45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentHub.Application", "src\TalentHub.Application\TalentHub.Application.csproj", "{7714EEE0-D6FE-4D6D-B08F-8BF6A9503B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentHub.Infrastructure", "src\TalentHub.Infrastructure\TalentHub.Infrastructure.csproj", "{E49A501F-7D6D-4532-B082-62946F4022D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentHub.Domain", "src\TalentHub.Domain\TalentHub.Domain.csproj", "{FFBB65D6-AE70-48F4-A35D-986E59DCC962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentHub.Presentation", "src\TalentHub.Presentation\TalentHub.Presentation.csproj", "{7D13095D-06C6-45AB-8136-2C30CD9DBF82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7714EEE0-D6FE-4D6D-B08F-8BF6A9503B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7714EEE0-D6FE-4D6D-B08F-8BF6A9503B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7714EEE0-D6FE-4D6D-B08F-8BF6A9503B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7714EEE0-D6FE-4D6D-B08F-8BF6A9503B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E49A501F-7D6D-4532-B082-62946F4022D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E49A501F-7D6D-4532-B082-62946F4022D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E49A501F-7D6D-4532-B082-62946F4022D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E49A501F-7D6D-4532-B082-62946F4022D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFBB65D6-AE70-48F4-A35D-986E59DCC962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFBB65D6-AE70-48F4-A35D-986E59DCC962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFBB65D6-AE70-48F4-A35D-986E59DCC962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFBB65D6-AE70-48F4-A35D-986E59DCC962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D13095D-06C6-45AB-8136-2C30CD9DBF82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D13095D-06C6-45AB-8136-2C30CD9DBF82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D13095D-06C6-45AB-8136-2C30CD9DBF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D13095D-06C6-45AB-8136-2C30CD9DBF82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7714EEE0-D6FE-4D6D-B08F-8BF6A9503B94} = {52E67793-D532-4E17-AC58-EC314021CE45}
+		{E49A501F-7D6D-4532-B082-62946F4022D7} = {52E67793-D532-4E17-AC58-EC314021CE45}
+		{FFBB65D6-AE70-48F4-A35D-986E59DCC962} = {52E67793-D532-4E17-AC58-EC314021CE45}
+		{7D13095D-06C6-45AB-8136-2C30CD9DBF82} = {52E67793-D532-4E17-AC58-EC314021CE45}
+	EndGlobalSection
+EndGlobal
