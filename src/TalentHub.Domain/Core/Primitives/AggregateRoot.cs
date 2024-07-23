@@ -1,5 +1,4 @@
 ﻿using TalentHub.Domain.Core.Abstractions;
-using TalentHub.Domain.Core.Events;
 
 namespace TalentHub.Domain.Core.Primitives;
 

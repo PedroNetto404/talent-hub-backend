@@ -12,6 +12,6 @@ public static partial class InfrastructureServices
         this IServiceCollection services,
         IConfiguration configuration) =>
         services
-            .AddAuth(configuration);
+            .AddAuth(configuration)
+            .AddPersistence(configuration);
 }
-

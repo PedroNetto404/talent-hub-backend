@@ -1,5 +1,3 @@
-using TalentHub.Domain.Core.Events;
-
 namespace TalentHub.Domain.Core.Abstractions;
 
 public interface IAggregateRoot
