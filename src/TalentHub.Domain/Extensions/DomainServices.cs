@@ -6,6 +6,7 @@ public static class DomainServices
 {
     public static IServiceCollection AddDomainServices(this IServiceCollection services)
     {
+        services.AddDefinedServices();
         return services;
     }
 }

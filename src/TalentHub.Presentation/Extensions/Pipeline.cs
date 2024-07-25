@@ -1,36 +1,33 @@
-using MinimalApi.Endpoint.Extensions;
-
 namespace TalentHub.Presentation.Extensions;
 
 public static class Pipeline
 {
-    public static WebApplication AddPipeline(this WebApplication app, IWebHostEnvironment env)
+    public static WebApplication UsePipeline(this WebApplication app, IWebHostEnvironment env)
     {
-        if (env.IsDevelopment())
-        {
-            app.UseSwagger(options =>
-            {
-                options.RouteTemplate = "swagger/{documentName}/swagger.json";
-            });
-            
-            app.UseSwaggerUI(options =>
-            {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "TalentHub API V1");
-                options.DocumentTitle = "TalentHub API";
-            });
+        app
+            .UseIfDevelopment(env)
+            .UseHttpsRedirection()
+            .UseRouting()
+            .UseAuthentication()
+            .UseAuthorization();
 
-            app.UseDeveloperExceptionPage();
-        }
-        
-        app.UseHttpsRedirection();
-        
-        app.UseRouting();
-        
-        app.UseAuthentication();
-        app.UseAuthorization();
-
-        app.MapEndpoints();
+        app.MapControllers();
 
         return app;
     }
+
+    private static IApplicationBuilder UseIfDevelopment(this IApplicationBuilder app, IWebHostEnvironment env) =>
+        env.IsDevelopment() ?
+            app
+                .UseSwagger(options =>
+                {
+                    options.RouteTemplate = "swagger/{documentName}/swagger.json";
+                })
+                .UseSwaggerUI(options =>
+                {
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "TalentHub API V1");
+                    options.DocumentTitle = "TalentHub API";
+                })
+                .UseDeveloperExceptionPage() :
+            app;
 }

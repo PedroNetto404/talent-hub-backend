@@ -7,14 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder
     .Services
-    .AddDefinedServices()
-    .AddPresentationServices()
     .AddDomainServices()
     .AddApplicationServices()
-    .AddInfrastructureServices(builder.Configuration);
+    .AddInfrastructureServices(builder.Configuration)
+    .AddPresentationServices();
 
 await builder
     .Build()
-    .AddPipeline(builder.Environment)
+    .UsePipeline(builder.Environment)
     .RunAsync();
-

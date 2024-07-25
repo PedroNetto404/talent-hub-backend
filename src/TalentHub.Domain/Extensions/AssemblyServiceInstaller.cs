@@ -5,7 +5,7 @@ using TalentHub.Domain.Core.Abstractions;
 
 namespace TalentHub.Domain.Extensions;
 
-public static class AssemblyServiceInstaller
+internal static class AssemblyServiceInstaller
 {
     public static IServiceCollection AddDefinedServices(this IServiceCollection services)
     {
