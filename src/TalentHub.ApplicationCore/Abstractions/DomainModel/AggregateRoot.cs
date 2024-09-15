@@ -1,6 +1,8 @@
 namespace TalentHub.ApplicationCore.Abstractions.DomainModel;
 
-public class AggregateRoot : IAggregateRoot
+public class AggregateRoot : 
+    Entity,
+    IAggregateRoot
 {
     private readonly List<IDomainEvent> _domainEvents = [];
 
